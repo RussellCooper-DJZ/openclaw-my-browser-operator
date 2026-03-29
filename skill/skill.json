@@ -2,7 +2,7 @@
   "name": "my_browser_operator",
   "version": "1.0.0",
   "description": "Connects OpenClaw to your local, real browser (Chrome/Edge) using CDP. Allows the agent to perform tasks using your existing logins, sessions, and local IP.",
-  "author": "Manus AI",
+  "author": "russellcooper",
   "license": "MIT",
   "entrypoint": "browser_operator_skill.py",
   "dependencies": [
