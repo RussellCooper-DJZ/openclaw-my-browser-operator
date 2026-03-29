@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenClaw MY Browser Operator</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <img src="../icons/icon48.png" alt="logo" class="logo" />
+    <div class="header-text">
+      <h1>OpenClaw</h1>
+      <span class="subtitle">MY Browser Operator</span>
+    </div>
+    <div id="status-dot" class="dot dot--off" title="未连接"></div>
+  </header>
+
+  <section class="status-bar">
+    <span id="status-label">未连接到 OpenClaw Gateway</span>
+  </section>
+
+  <section class="config-section" id="config-section">
+    <label for="gateway-url">Gateway URL</label>
+    <input id="gateway-url" type="text" placeholder="ws://127.0.0.1:18789/browser-relay" spellcheck="false" />
+
+    <label for="api-key">API Key</label>
+    <input id="api-key" type="password" placeholder="留空则不验证" />
+
+    <label for="profile">Profile</label>
+    <select id="profile">
+      <option value="user">user（MY Browser）</option>
+      <option value="openclaw">openclaw（沙盒）</option>
+    </select>
+  </section>
+
+  <div class="btn-row">
+    <button id="btn-connect" class="btn btn--primary">连接</button>
+    <button id="btn-disconnect" class="btn btn--danger" disabled>断开</button>
+  </div>
+
+  <section class="stats">
+    <div class="stat">
+      <span class="stat-value" id="task-count">0</span>
+      <span class="stat-label">已完成任务</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value" id="tab-count">—</span>
+      <span class="stat-label">当前标签页</span>
+    </div>
+  </section>
+
+  <footer>
+    <button class="link-btn" id="btn-panel">打开侧边栏</button>
+    <span class="sep">·</span>
+    <a href="https://docs.openclaw.ai" target="_blank" class="link-btn">文档</a>
+  </footer>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

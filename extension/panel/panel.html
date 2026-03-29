@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>OpenClaw Operator Panel</title>
+  <link rel="stylesheet" href="panel.css" />
+</head>
+<body>
+  <!-- ── Header ── -->
+  <header>
+    <img src="../icons/icon16.png" alt="" class="logo" />
+    <span class="title">OpenClaw Operator</span>
+    <div id="conn-dot" class="dot dot--off"></div>
+  </header>
+
+  <!-- ── 授权请求卡片（默认隐藏）── -->
+  <div id="auth-card" class="card card--warn hidden">
+    <div class="card-icon">⚡</div>
+    <div class="card-body">
+      <p class="card-title">OpenClaw 请求控制浏览器</p>
+      <p id="task-desc" class="card-desc">—</p>
+      <p id="task-origin" class="card-origin">来源: —</p>
+    </div>
+    <div class="auth-btns">
+      <button id="btn-authorize" class="btn btn--success">授权本次任务</button>
+      <button id="btn-deny"      class="btn btn--danger">拒绝</button>
+    </div>
+  </div>
+
+  <!-- ── 执行日志 ── -->
+  <section class="log-section">
+    <div class="log-header">
+      <span>执行日志</span>
+      <button id="btn-clear" class="link-btn">清空</button>
+    </div>
+    <ul id="log-list" class="log-list">
+      <li class="log-empty">等待 OpenClaw 下发任务…</li>
+    </ul>
+  </section>
+
+  <!-- ── 底部统计 ── -->
+  <footer>
+    <span>已完成 <strong id="task-count">0</strong> 个任务</span>
+    <span class="sep">·</span>
+    <span id="session-id" class="muted">未连接</span>
+  </footer>
+
+  <script src="panel.js" type="module"></script>
+</body>
+</html>
