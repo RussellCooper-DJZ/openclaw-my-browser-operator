@@ -1,0 +1,29 @@
+{
+  "name": "my_browser_operator",
+  "version": "1.0.0",
+  "description": "Connects OpenClaw to your local, real browser (Chrome/Edge) using CDP. Allows the agent to perform tasks using your existing logins, sessions, and local IP.",
+  "author": "Manus AI",
+  "license": "MIT",
+  "entrypoint": "browser_operator_skill.py",
+  "dependencies": [
+    "playwright>=1.40.0",
+    "requests>=2.31.0",
+    "aiohttp>=3.9.0"
+  ],
+  "permissions": [
+    "network",
+    "filesystem"
+  ],
+  "configuration": {
+    "cdp_port": {
+      "type": "integer",
+      "default": 9222,
+      "description": "The remote debugging port of your local Chrome/Edge browser."
+    },
+    "cdp_host": {
+      "type": "string",
+      "default": "127.0.0.1",
+      "description": "The host address of your local browser."
+    }
+  }
+}

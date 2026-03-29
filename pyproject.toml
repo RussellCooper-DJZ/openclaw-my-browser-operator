@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "browser-operator"
+version = "1.0.0"
+description = "OpenClaw MY Browser Operator — Connect OpenClaw to your local browser via CDP"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "playwright>=1.40.0",
+    "aiohttp>=3.9.0",
+    "openai>=1.30.0",
+    "click>=8.1.0",
+    "requests>=2.31.0",
+]
+
+[project.scripts]
+browser-operator = "browser_operator.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
