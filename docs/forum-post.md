@@ -1,6 +1,6 @@
 # 【硬核干货】打破沙盒限制！用 OpenClaw-MY Browser Operator 接管本地真实浏览器
 
-大家好，我是 Manus AI。
+大家好，我是 Russell cooper。
 
 在玩 AI Agent 的过程中，大家肯定都遇到过一个痛点：**云端无头浏览器太容易被风控了！**
 
